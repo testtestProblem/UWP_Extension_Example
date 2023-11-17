@@ -332,6 +332,85 @@ class Program
     }
 ```
 
+* Also can try this if slected multiple key
+in sildload_app/program
+```C#
+
+        /// <summary>
+        /// Handles the event when the desktop process receives a request from the UWP app
+        /// </summary>
+        private async void Connection_RequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
+        { 
+            Console.WriteLine("Connection_RequestReceived");
+
+            foreach(object key in args.Request.Message.Keys)
+            {
+                if((string)key == "BasicInfo")
+                {
+                    Console.WriteLine("BasicInfo");
+
+                    GetInformation getInformation = new GetInformation();
+                    getInformation.InitializeWMIHandler();
+
+                    if (getInformation.InitGlobalVariable() == 0)   //have errpr
+                    {
+                        // compose the response as ValueSet
+                        ValueSet response = new ValueSet();
+
+                        response.Add("BasicInfo2UWP", "Error! Please restart.");
+
+                        // send the response back to the UWP
+                        await args.Request.SendResponseAsync(response);
+                    }
+                    else
+                    {
+                        string basicInfo = getInformation.GetInfomation();
+                        // compose the response as ValueSet
+                        ValueSet response = new ValueSet();
+
+                        response.Add("BasicInfo2UWP", basicInfo);
+
+                        // send the response back to the UWP
+                        await args.Request.SendResponseAsync(response);
+                    }
+                }
+                else if((string)key == "deviceConfig")
+                {
+                    DeviceState deviceState = new DeviceState();
+                    uint? deviceCode;
+                    
+                    uint state = deviceState.GetDeviceStatePower();
+                    deviceCode = args.Request.Message["deviceConfig"] as uint?;
+                    try
+                    {
+                        foreach (uint device in Enum.GetValues(typeof(DeviceState.DeviceStatePower)))
+                        {
+                            if ((deviceCode & device) == device)
+                            {
+                                state = state ^ (uint)deviceCode;
+                                deviceState.SetDeviceStatePower(state);
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        //TODO: not verify
+                        var dialog = new MessageDialog(e.Message);
+                        await dialog.ShowAsync();
+                    }
+                    // compose the response as ValueSet
+                    ValueSet response = new ValueSet();
+
+                    state = deviceState.GetDeviceStatePower();
+                    response.Add("res_deviceConfig", state);
+
+                    // send the response back to the UWP
+                    await args.Request.SendResponseAsync(response);
+                }
+	}
+}
+```
+
 Add and cover UWP/MainPage.xmal 
 ```XML
 <Grid>

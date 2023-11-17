@@ -479,6 +479,14 @@ Add and cover UWP/MainPage.xmal.cs
 * Add references Windows Desktop Extensions for the UWP in UWP project.  
 ![image](https://github.com/testtestProblem/UWP_extention/assets/107662393/9c2721f2-0fc4-4a04-8162-bc3da3b69213)
 
+
+# Other
+
+error code => DEP1000: Cannot copy file 
+Just close all debug window
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/1654822f-431d-4822-87f5-7c9279c98887)
+
+
 # Reference
 * https://stefanwick.com/2018/04/16/uwp-with-desktop-extension-part-3/
 * https://www.cnblogs.com/manupstairs/p/14178931.html

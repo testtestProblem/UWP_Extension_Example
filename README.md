@@ -126,6 +126,7 @@ sealed partial class App : Application
 
 ```
 
+* launch app and re-launch when disconnection
 Add and cover in UWP/MainPage.xmal.cs
 ```C#
  public MainPage()
@@ -185,7 +186,6 @@ Add and cover in UWP/MainPage.xmal.cs
 
 ```
 
-
 * if can not find entrypoint, can see this for more information  
 https://stackoverflow.com/questions/77065216/dep0700-registration-of-the-app-failed-while-uwp-extension-launch-consult-app/77493220#77493220
 
@@ -195,6 +195,7 @@ https://stackoverflow.com/questions/77065216/dep0700-registration-of-the-app-fai
 Go to BelaunchedApp/reference and add those file 
 ![image](https://github.com/testtestProblem/UWP_extention/assets/107662393/9f198e02-c419-4764-a2b8-77e8e318e154)
 
+* It can send data and receive data 
 Add and cover sildload_app/program
 ```C#
 class Program
@@ -347,6 +348,7 @@ Add and cover UWP/MainPage.xmal
 </Grid>
 ```
 
+* It can send data and receive data
 Add and cover UWP/MainPage.xmal.cs
 ```C#
 /// <summary>

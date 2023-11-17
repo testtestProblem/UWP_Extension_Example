@@ -332,7 +332,7 @@ class Program
 ```
 
 Add and cover UWP/MainPage.xmal 
-```
+```XML
 <Grid>
         <Button  x:Name="calc_btn"   Margin="49,100,0,0" VerticalAlignment="Top" Click="calc_btn_Click" Height="58" Width="117">
             <TextBlock>calculate<LineBreak/>in sideload app</TextBlock>
@@ -344,7 +344,7 @@ Add and cover UWP/MainPage.xmal
         <TextBox x:Name="ans_textBox" HorizontalAlignment="Left" Margin="285,15,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Height="100"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="54,197,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
-    </Grid>
+</Grid>
 ```
 
 Add and cover UWP/MainPage.xmal.cs

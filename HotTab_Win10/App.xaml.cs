@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.AppService;
+using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,6 +24,24 @@ namespace HotTab_Win10
     /// </summary>
     sealed partial class App : Application
     {
+        public static BackgroundTaskDeferral AppServiceDeferral = null;
+        public static AppServiceConnection Connection = null;
+        public static bool IsForeground = false;
+        public static event EventHandler<AppServiceTriggerDetails> AppServiceConnected;
+        public static event EventHandler AppServiceDisconnected;
+
+
+
+        private void App_LeavingBackground(object sender, LeavingBackgroundEventArgs e)
+        {
+            IsForeground = true;
+        }
+
+        private void App_EnteredBackground(object sender, EnteredBackgroundEventArgs e)
+        {
+            IsForeground = false;
+        }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -30,7 +50,43 @@ namespace HotTab_Win10
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            this.EnteredBackground += App_EnteredBackground;
+            this.LeavingBackground += App_LeavingBackground;
         }
+
+        /// <summary>
+        /// Handles connection requests to the app service
+        /// </summary>
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            base.OnBackgroundActivated(args);
+
+            if (args.TaskInstance.TriggerDetails is AppServiceTriggerDetails details)
+            {
+                // only accept connections from callers in the same package
+                if (details.CallerPackageFamilyName == Package.Current.Id.FamilyName)
+                {
+                    // connection established from the fulltrust process
+                    AppServiceDeferral = args.TaskInstance.GetDeferral();
+                    args.TaskInstance.Canceled += OnTaskCanceled;
+
+                    Connection = details.AppServiceConnection;
+                    AppServiceConnected?.Invoke(this, args.TaskInstance.TriggerDetails as AppServiceTriggerDetails);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Task canceled here means the app service client is gone
+        /// </summary>
+        private void OnTaskCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
+        {
+            AppServiceDeferral?.Complete();
+            AppServiceDeferral = null;
+            Connection = null;
+            AppServiceDisconnected?.Invoke(this, null);
+        }
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

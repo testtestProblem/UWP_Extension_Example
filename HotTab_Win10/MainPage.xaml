@@ -9,6 +9,15 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button  x:Name="calc_btn"   Margin="49,100,0,0" VerticalAlignment="Top" Click="calc_btn_Click" Height="58" Width="117">
+            <TextBlock>calculate<LineBreak/>in sideload app</TextBlock>
+        </Button>
+        <TextBlock x:Name="puse_textBox" HorizontalAlignment="Left" Margin="124,42,0,0" Text="+" TextWrapping="Wrap" VerticalAlignment="Top" Width="33"/>
+        <TextBox x:Name="a_textBlock" HorizontalAlignment="Left" Margin="44,38,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="b_textBlock" HorizontalAlignment="Left" Margin="164,38,0,0" Text="20" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="equal_textBox" HorizontalAlignment="Left" Margin="244,42,0,0" Text="=" TextWrapping="Wrap" VerticalAlignment="Top" Width="33"/>
+        <TextBox x:Name="ans_textBox" HorizontalAlignment="Left" Margin="285,15,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Height="100"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="54,197,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

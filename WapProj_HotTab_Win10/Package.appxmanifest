@@ -4,7 +4,10 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  IgnorableNamespaces="uap rescap">
+  
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  IgnorableNamespaces="uap mp desktop rescap">
 
   <Identity
     Name="747e73e9-556f-4468-8093-8c898243ee87"
@@ -39,6 +42,14 @@
         <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
+
+				<Extensions>
+						<uap:Extension Category="windows.appService">
+								<uap:AppService Name="SampleInteropService" />
+						</uap:Extension>
+						<desktop:Extension Category="windows.fullTrustProcess" Executable="CollectDataAP\CollectDataAP.exe" />
+				</Extensions>
+				
     </Application>
   </Applications>
 

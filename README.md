@@ -3,14 +3,11 @@ Universal Windows Platform (UWP). It has delicate UI by XAML. But it can not sup
 
 # Project describe
 * Paltform: visual studio 2019  
-* Function describe: UWP through Windows Desktop Extensions for the UWP tool side loading winform.  
+* Function describe: UWP through Windows Desktop Extensions for the UWP tool side loading console.  
 * Compile sample: UWP can not run at any CPU, and target should set Windows Application Packaging Project.  
 ![image](https://github.com/testtestProblem/UWP_extention/assets/107662393/b60b14bc-4c7e-4bba-9e72-c146665b3147)
 
-# UWP extention
-
----------------
-For just sideload other app
+# Just sideload other app
 
 * This UWP_extention can side loading winform by using ```FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync()```.  
  
@@ -189,12 +186,12 @@ Add and cover in UWP/MainPage.xmal.cs
 ```
 
 
-if can not find entrypoint, can see this for more information  
+* if can not find entrypoint, can see this for more information  
 https://stackoverflow.com/questions/77065216/dep0700-registration-of-the-app-failed-while-uwp-extension-launch-consult-app/77493220#77493220
 
 ---------------------------------------------------------
 
-
+# Sideload app and UWP can change message in two way
 
 Go to BelaunchedApp/reference and add those file 
 ![image](https://github.com/testtestProblem/UWP_extention/assets/107662393/9f198e02-c419-4764-a2b8-77e8e318e154)
@@ -474,8 +471,8 @@ Add and cover UWP/MainPage.xmal.cs
 
 -----------------------------------------------
 
-package to app
-
+# package to app
+* TODO...
 
 
 * And should generate self-signed certification.  

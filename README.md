@@ -548,14 +548,42 @@ Add and cover UWP/MainPage.xmal.cs
 ```
 
 
-# package to app
-* TODO...
-
+# Package to app
 
 * First should generate self-signed certification for UWP and WapProj.  
-![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/f4a73f94-975d-495e-b24e-ab5096e5db7c)  
-![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/31e7fbd3-d36b-475c-a25e-46301a8d2791)
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/f4a73f94-975d-495e-b24e-ab5096e5db7c)    
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/31e7fbd3-d36b-475c-a25e-46301a8d2791)  
 
+* Add picture
+If use default picture may will error
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/42b275c0-13a5-4fe6-8154-fb7d43cf36c3)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/980e7e93-62d9-44f6-8a10-09845e616006)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/dc126578-9dab-4003-ba56-d4d768c81b68)  
+
+* Package
+In WapProj  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/28a0eca9-dff0-414c-948b-f2e22d5bbfee)  
+next  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/a6ade578-dcce-4cce-ace2-269bf43ee061)  
+next  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/70903eaa-5757-4aed-a45d-f482c740bcf5)  
+x64 Release
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/0ccf524a-e871-41b0-9044-51e5b63be3d2)  
+
+* Sign  
+Go to C:\...\HotTab_Win10\WapProj_HotTab_Win10\bin\x64\Release
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/4848c730-a3da-40e8-be84-002866f92b9e)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/211e0a07-2397-41aa-b288-e5eb296f59eb)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/77b53f39-26aa-4993-ae43-016e578e30ff)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/cf23ebf1-6539-4894-9874-b02dc585f770)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/30bc3f51-900d-476d-a791-764be9724494)  
+Add below 3 picture sign  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/e36b8e5d-b5f3-4ee5-8afb-235c7c6bfc2d)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/eea63ec4-3735-47f0-81b1-77fa9d6f5ec9)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/9df4efa5-bb4f-49ae-aa2c-716ac369745b)  
+
+Or, It will show error code 0x800B010A  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/fa541821-e83a-4886-8095-91189c6f11b8)  
 
 # Other
 

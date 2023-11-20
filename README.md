@@ -552,16 +552,14 @@ Add and cover UWP/MainPage.xmal.cs
 * TODO...
 
 
-* And should generate self-signed certification.  
-![image](https://github.com/testtestProblem/UWP_extention/assets/107662393/0aca610e-2e1f-483e-be29-ae0ea8851638)
-
-* Add references Windows Desktop Extensions for the UWP in UWP project.  
-![image](https://github.com/testtestProblem/UWP_extention/assets/107662393/9c2721f2-0fc4-4a04-8162-bc3da3b69213)
+* First should generate self-signed certification for UWP and WapProj.  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/f4a73f94-975d-495e-b24e-ab5096e5db7c)  
+![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/31e7fbd3-d36b-475c-a25e-46301a8d2791)
 
 
 # Other
 
-error code => DEP1000: Cannot copy file 
+error code => DEP1000: Cannot copy file  
 Just close all debug window
 ![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/1654822f-431d-4822-87f5-7c9279c98887)
 

@@ -335,7 +335,6 @@ class Program
 * Also can try this if slected multiple key
 in sildload_app/program
 ```C#
-
         /// <summary>
         /// Handles the event when the desktop process receives a request from the UWP app
         /// </summary>

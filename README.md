@@ -570,7 +570,7 @@ x64 Release
 ![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/0ccf524a-e871-41b0-9044-51e5b63be3d2)  
 
 * Sign  
-Go to C:\...\HotTab_Win10\WapProj_HotTab_Win10\bin\x64\Release
+Go to C:\...\HotTab_Win10\WapProj_HotTab_Win10\bin\x64\Release  
 ![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/4848c730-a3da-40e8-be84-002866f92b9e)  
 ![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/211e0a07-2397-41aa-b288-e5eb296f59eb)  
 ![image](https://github.com/testtestProblem/UWP_Extension_Example/assets/107662393/77b53f39-26aa-4993-ae43-016e578e30ff)  

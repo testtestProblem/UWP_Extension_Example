@@ -195,8 +195,8 @@ https://stackoverflow.com/questions/77065216/dep0700-registration-of-the-app-fai
 Go to BelaunchedApp/reference and add those file 
 ![image](https://github.com/testtestProblem/UWP_extention/assets/107662393/9f198e02-c419-4764-a2b8-77e8e318e154)
 
-* It can send data and receive data 
-Add and cover sildload_app/program
+* It can send data and receive data  
+Add and cover sildload_app/program  
 ```C#
 class Program
     { 
@@ -332,7 +332,7 @@ class Program
     }
 ```
 
-* Also can try this if slected multiple key
+* Also can try this if slected multiple key  
 in sildload_app/program
 ```C#
         /// <summary>
@@ -409,8 +409,8 @@ in sildload_app/program
 	}
 }
 ```
-
-Add and cover UWP/MainPage.xmal 
+-------------------------------------------
+Add and cover UWP/MainPage.xmal  
 ```XML
 <Grid>
         <Button  x:Name="calc_btn"   Margin="49,100,0,0" VerticalAlignment="Top" Click="calc_btn_Click" Height="58" Width="117">
@@ -426,7 +426,7 @@ Add and cover UWP/MainPage.xmal
 </Grid>
 ```
 
-* It can send data and receive data
+* It can send data and receive data  
 Add and cover UWP/MainPage.xmal.cs
 ```C#
 /// <summary>
